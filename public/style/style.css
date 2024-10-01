@@ -1,0 +1,821 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+}
+
+/* General Layout */
+header {
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ff3366;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff3366;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Latest Blog Posts Section */
+.latest-posts-section {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #3b3f5c;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Blog Posts in a Row */
+.posts {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow-x: auto;
+}
+
+.post {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 300px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.post h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post h3 a {
+    color: #ff3366;
+    text-decoration: none;
+}
+
+.post h3 a:hover {
+    color: #ff6699;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer p a {
+    color: #ff3366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer p a:hover {
+    color: #ff6699;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    flex-direction: column; /* This ensures the text goes in a column, placing the title and description on separate lines */
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px; /* Adds space between title and the paragraph */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: 0; /* Ensure there's no extra top margin */
+    display: block;
+    text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* General Layout */
+header {
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ff3366;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background-color: #ff3366;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #3b3f5c;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #3b3f5c;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    flex: 1;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-item i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff3366;
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1rem;
+}
+
+.contact-item a {
+    color: #3b3f5c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    color: #ff3366;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+}
+/* Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Layout */
+header {
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ff3366;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background-color: #ff3366;
+}
+
+/* Flex Layout to push footer to bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures that the content is spread and the footer stays at the bottom */
+    min-height: 100vh; /* Full viewport height */
+}
+
+/* About Us Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #fff;
+    flex-grow: 1; /* Ensures this section takes up available space */
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #3b3f5c;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    margin-top: auto; /* Ensures it sticks to the bottom */
+}
+/* Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Layout */
+header {
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ff3366;
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover {
+    background-color: #ff3366;
+}
+
+/* Pop-up hover effect for logo */
+.logo:hover {
+    transform: scale(1.2); /* Enlarges the logo slightly */
+    color: #ffffff; /* Change color to white on hover */
+}
+
+/* Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Layout */
+header {
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ff3366;
+    transition: color 0.3s ease; /* Transition for color change */
+    text-decoration: none; /* Remove text decoration from logo */
+}
+
+/* Only apply hover effect to the text within the logo */
+.logo span {
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #ff3366;
+}
+
+/* Pop-up hover effect for logo text */
+.logo span:hover {
+    transform: scale(1.2); /* Enlarges the logo text slightly */
+    color: #ffffff; /* Change color to white on hover */
+}
+/* Reset and Box Model */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* General Layout */
+header {
+    background-color: #3b3f5c;
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #ff3366;
+    transition: color 0.3s ease; /* Transition for color change */
+    text-decoration: none; /* Remove text decoration from logo */
+    display: inline-block; /* Allow span to not affect surrounding elements */
+}
+
+/* Only apply hover effect to the text within the logo */
+.logo span {
+    transition: transform 0.3s ease, color 0.3s ease; /* Added transition for smooth effect */
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #ff3366;
+}
+
+/* Pop-up hover effect for logo text */
+.logo span:hover {
+    transform: scale(1.2); /* Enlarges the logo text slightly */
+    color: #ffffff; /* Change color to white on hover */
+}
+
+/* Prevent div resizing */
+.logo span {
+    display: inline-block; /* Ensure that the span can be transformed independently */
+}
+/* General Body and Fonts */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #18bc9c;
+}
+
+/* Blog Description Section */
+.blog-description {
+    padding: 40px;
+    background-color: #18bc9c;
+    color: #fff;
+    text-align: center;
+}
+
+.blog-description h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.blog-description p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Blog Post Content */
+.post-content {
+    padding: 40px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.post-content p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Comments Section */
+.comments-section {
+    padding: 40px;
+    background-color: #ecf0f1;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.comment-form h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.comment-form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #333;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.comment-form input[type="submit"] {
+    background-color: #18bc9c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form input[type="submit"]:hover {
+    background-color: #16a085;
+}
+
+/* Displayed Comments */
+.comments-display {
+    margin-top: 30px;
+}
+
+.comments-display h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.comments-display .comment {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-display .comment p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.comments-display .comment strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-description, 
+    .post-content, 
+    .comments-section {
+        padding: 20px;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .post-content h1 {
+        font-size: 2rem;
+    }
+    
+    .comment-form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+

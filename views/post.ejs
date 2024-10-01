@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post - Gaming Blog</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Gaming Blog</div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Static Blog Description Section -->
+    <section class="blog-description">
+        <h2>About This Blog</h2>
+        <p>
+            Welcome to Gaming Blog, your go-to source for all things gaming. From in-depth reviews of the latest AAA releases 
+            to thoughtful insights on indie gems, we cover it all. Stay tuned for the latest updates in the gaming industry!
+        </p>
+    </section>
+
+    <!-- Blog Post Content -->
+    <section class="post-content">
+        <h1>The Rise of Indie Games: Changing the Industry</h1>
+        <p>Posted on September 22, 2024</p>
+
+        <p>
+            Indie games have taken the world by storm in recent years. While major AAA studios continue to dominate, indie 
+            developers have made remarkable strides in creating unique, innovative experiences that resonate with players worldwide...
+        </p>
+
+        <!-- More content here -->
+
+    </section>
+
+    <!-- Comment Section (Frontend Only) -->
+    <section class="comments-section">
+        <h2>Comments</h2>
+
+        <!-- Comment Form -->
+        <div class="comment-form">
+            <h3>Leave a Comment</h3>
+            <form action="/submit" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name..." required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email..." required><br><br>
+                
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" placeholder="Your comment..." required></textarea><br><br>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- Comments Display (Static) -->
+        <div class="comments-display">
+            <h3>Previous Comments</h3>
+            <% comments.forEach(function(comment) { %>
+                <div class="comment">
+                    <p><strong><%= comment.name %>:</strong> <%= comment.text %></p>
+                    <form action="/comments/<%= comment.id %>?_method=PATCH" method="POST">
+                        <input type="text" name="name" placeholder="Update Name" required>
+                        <input type="text" name="text" placeholder="Update Comment" required>
+                        <button type="submit" class="modify-btn">Modify</button>
+                    </form>
+                    
+                    <!-- Delete Comment Form -->
+                    <form action="/comments/<%= comment.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </div>
+            <% }); %>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Gaming Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
